@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "survey-ui": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "sourceMap": true,
+            "outputPath": "dist/survey-ui",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": [],
+            "tsConfig": "tsconfig.app.json",
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "outputHashing": "all"
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": { "browserTarget": "survey-ui:build" }
+        }
+      }
+    }
+  },
+  "defaultProject": "survey-ui",
+  "cli": {
+    "analytics": "b141f19c-82fb-4a49-94a2-f86246b1b45b"
+  },
+  "sourceMap": {
+    "scripts": true,
+    "styles": true,
+    "vendor": true
+  }
+}
